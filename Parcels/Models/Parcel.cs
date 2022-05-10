@@ -2,12 +2,18 @@ namespace Parcels.Models
 {
   public class Parcel
   {
-    public int Weight { get; set; }
+    public double Weight { get; set; }
     public int Height { get; set; }
     public int Width { get; set; }
     public int Length { get; set; }
+    public int ParcelVolume { get; set; }
+    public string ParcelCostToShip { get; set;}
 
-    public Parcel (int weight, int height, int width, int length)
+    public Parcel ()
+    {
+    }
+
+    public Parcel (double weight, int height, int width, int length)
     {
       Weight = weight;
       Height = height;
@@ -20,9 +26,10 @@ namespace Parcels.Models
       return Height * Width * Length;
     }
 
-    public int CostToShip()
+    public string CostToShip()
     {
-      return (Volume() * Weight)*100
+      return ((Volume() * Weight)/50).ToString("F");
     }
+
   }
 }

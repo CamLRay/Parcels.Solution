@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Parcel Shipper</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="text-center">Please enter package dimensions in the following form below.</h2>
+      <form action="/parcel" method="post" class="text-center">
+        <label for="weight">Enter the weight of your parcel</label><br>
+        <input id="weight" name="weight" type="number" placeholder="lbs"><br>
+        <label for="height">Enter the height of your parcel</label><br>
+        <input id="height" name="height" type="number" placeholder="inches"><br>
+        <label for="width">Enter the width of your parcel</label><br>
+        <input id="width" name="width" type="number" placeholder="inches"><br>
+        <label for="length">Enter the length of your parcel</label><br>
+        <input id="length" name="length" type="number" placeholder="inches"><br>
+        <br><button type="submit" class="btn btn-primary">Calcuate shipping cost</button>
+      </form>
+    </div>
+  </body>
+</html>

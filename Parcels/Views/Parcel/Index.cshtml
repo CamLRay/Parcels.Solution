@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Parcel reciept</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  </head>
+  <body>
+  @using Parcels.Models;
+  @if((@Model.Height != 0) && (@Model.Width != 0) && (Model.Length != 0) && (Model.Weight != 0))
+  {
+
+    <div class="container">
+      <h1>Thank you for shipping through us.</h1>
+      <p>Your parcel has the volume of  inches</p>
+      <p>The Height is: @Model.Height.</p>
+      <p>The width is: @Model.Width.</p>
+      <p>The Length is: @Model.Length.</p>
+      <p>The volume is: @Model.ParcelVolume </p>
+      <p>The cost to ship was: $@Model.ParcelCostToShip.</p>
+      <a href='/parcel/new'>Ship another parcel.</a>
+    </div>
+  } else 
+  {
+    <h1>Please fill out all dimensions and weight</h1>
+    <a href='/parcel/new'>Try again.</a>
+  }
+  </body>
+</html>
